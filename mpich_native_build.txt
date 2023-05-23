@@ -1,0 +1,11 @@
+#using libpmi-4.1.1 from MPICH 
+
+MPICH Version:      4.1.1
+MPICH Release date: Mon Mar  6 14:14:15 CST 2023
+MPICH ABI:          15:0:3
+MPICH Device:       ch4:ucx
+MPICH configure:    --prefix=/work/sorawit-m/mpich_wfort --with-slurm=/opt/slurm --with-device=ch4:ucx --with-pmi-include=/work/sorawit-m/libpmi_installed/include --with-pmi-lib=/work/sorawit-m/libpmi_installed/lib
+MPICH CC:           gcc    -O2
+MPICH CXX:          g++   -O2
+MPICH F77:          gfortran   -O2
+MPICH FC:           gfortran   -O2
