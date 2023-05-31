@@ -28,14 +28,6 @@ for i in {1..40}; do
 	echo "%2 OV2_latency"
 	srun --mpi=pmi2 -n $NNODE singularity exec --bind $BIND_ARG2 $WORKDIR/osu_container/osu_noib_ubuntu22.sif /opt/$OSU_ALLREDUCE -m 262144:262144
 
-	#echo "%3 OV3_latency"
-	#srun --mpi=pmi2 -n $NNODE singularity exec --bind $LIBIB_BIND $WORKDIR/osu_container/osu_mpich_wucx112.sif /opt/$OSU_ALLREDUCE -m 262144:262144
-
-	echo "%4 OV4_latency"
-	srun --mpi=pmi2 -n $NNODE singularity exec $WORKDIR/osu_container/osu_noucx_mpich.sif /opt/$OSU_ALLREDUCE -m 262144:262144
-	echo "%5 OV5_latency"
-	srun --mpi=pmi2 -n $NNODE singularity exec --bind $MPI_REPL $WORKDIR/osu_container/osu_noucx_mpich.sif /opt/$OSU_ALLREDUCE -m 262144:262144
-
 done
 
 echo "#END TEST WITH OSU_ALLREDUCE"
